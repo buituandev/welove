@@ -1,0 +1,86 @@
+const post = {
+    audioPreview: 'Nghe thử',
+    createdOnDevice: 'Bài viết này được tạo trên {{device}}',
+
+    optionsSheet: {
+        title: 'Bài viết',
+        subtitle: 'Bạn đang nghĩ gì?',
+        share: 'Chia sẻ',
+        copyLink: 'Sao chép liên kết',
+        report: 'Báo cáo',
+        editPost: 'Sửa bài viết',
+        deletePost: 'Xóa bài viết',
+        translate: 'Dịch',
+        hideTranslation: 'Ẩn bản dịch',
+        summarize: 'Tóm tắt bằng WeLove AI',
+    },
+
+    summary: {
+        title: 'Tóm tắt bằng WeLove AI',
+        generating: 'Đang tạo tóm tắt bằng WeLove AI...',
+        failed: 'Không thể tạo tóm tắt.',
+        copied: 'Đã sao chép tóm tắt vào bộ nhớ tạm!',
+        copy: 'Sao chép tóm tắt',
+        close: 'Đóng',
+        retry: 'Thử lại',
+    },
+
+    dialogs: {
+        deletePostTitle: 'Xóa bài viết',
+        deletePostBody: 'Bạn có chắc muốn xóa bài viết này không? Hành động này không thể hoàn tác.',
+        delete: 'Xóa',
+        cancel: 'Hủy',
+        successTitle: 'Thành công',
+        postDeleted: 'Đã xóa bài viết.',
+        errorTitle: 'Lỗi',
+        deleteFailed: 'Không thể xóa bài viết. Vui lòng thử lại.',
+        ok: 'OK',
+        reportTitle: 'Báo cáo',
+        reportComingSoon: 'Tính năng báo cáo sắp ra mắt!',
+        shareTitle: 'Chia sẻ lại',
+        repostInstant: 'Đăng lại ngay',
+        repostQuote: 'Trích dẫn',
+        repostSuccess: 'Đã chia sẻ lại thành công!',
+        repostFailed: 'Không thể chia sẻ lại bài viết.',
+        copyLinkTitle: 'Sao chép liên kết',
+        linkCopied: 'Đã sao chép liên kết!',
+
+    },
+
+    commentsSheet: {
+        title: 'Bình luận',
+        emptyTitle: 'Chưa có bình luận',
+        emptyBody: 'Hãy bắt đầu cuộc trò chuyện và là người bình luận đầu tiên!',
+        editingBanner: 'Đang sửa bình luận',
+        placeholderAdd: 'Thêm bình luận...',
+        placeholderEdit: 'Sửa bình luận...',
+        actionEdit: 'Sửa',
+        actionDelete: 'Xóa',
+        sendPost: 'Đăng',
+        sendSave: 'Lưu',
+        actionReply: 'Phản hồi',
+        viewReply_one: 'Xem {{count}} phản hồi',
+        viewReply_other: 'Xem {{count}} phản hồi',
+        hideReplies: 'Ẩn phản hồi',
+        loadMoreReplies: 'Tải thêm phản hồi',
+        replyingTo: 'Đang phản hồi {{name}}',
+    },
+
+    likersSheet: {
+        title: 'Lượt thích',
+        subtitle_one: '{{count}} người đã thích bài viết này',
+        subtitle_other: '{{count}} người đã thích bài viết này',
+        emptyTitle: 'Chưa có lượt thích',
+        emptyBody: 'Hãy là người đầu tiên thích bài viết này!',
+    },
+
+    translate: 'Dịch',
+    translating: 'Đang dịch...',
+    translated: 'Đã dịch',
+    showOriginal: 'Xem bản gốc',
+    changeLanguage: 'Thay đổi',
+    selectLanguage: 'Chọn ngôn ngữ dịch',
+    sameLanguageError: 'Văn bản/chú thích đã ở ngôn ngữ được chọn của bạn',
+} as const;
+
+export default post;

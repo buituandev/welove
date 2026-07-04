@@ -1,0 +1,86 @@
+const post = {
+    audioPreview: 'Preview',
+    createdOnDevice: 'This post was created on {{device}}',
+
+    optionsSheet: {
+        title: 'Post',
+        subtitle: 'Got something on your mind?',
+        share: 'Share',
+        copyLink: 'Copy Link',
+        report: 'Report',
+        editPost: 'Edit Post',
+        deletePost: 'Delete Post',
+        translate: 'Translate',
+        hideTranslation: 'Hide Translation',
+        summarize: 'Summarize with WeLove AI',
+    },
+
+    summary: {
+        title: 'WeLove AI Summary',
+        generating: 'Generating summary with WeLove AI...',
+        failed: 'Failed to generate summary.',
+        copied: 'Summary copied to clipboard!',
+        copy: 'Copy Summary',
+        close: 'Close',
+        retry: 'Retry',
+    },
+
+    dialogs: {
+        deletePostTitle: 'Delete Post',
+        deletePostBody: 'Are you sure you want to delete this post? This action cannot be undone.',
+        delete: 'Delete',
+        cancel: 'Cancel',
+        successTitle: 'Success',
+        postDeleted: 'Post deleted successfully.',
+        errorTitle: 'Error',
+        deleteFailed: 'Failed to delete post. Please try again.',
+        ok: 'OK',
+        reportTitle: 'Report',
+        reportComingSoon: 'Report feature coming soon!',
+        shareTitle: 'Repost',
+        repostInstant: 'Repost Now',
+        repostQuote: 'Quote Repost',
+        repostSuccess: 'Reposted successfully!',
+        repostFailed: 'Failed to repost.',
+        copyLinkTitle: 'Copy Link',
+        linkCopied: 'Link copied to clipboard!',
+
+    },
+
+    commentsSheet: {
+        title: 'Comments',
+        emptyTitle: 'No comments yet',
+        emptyBody: 'Start the conversation and be the first to comment!',
+        editingBanner: 'Editing comment',
+        placeholderAdd: 'Add a comment...',
+        placeholderEdit: 'Edit your comment...',
+        actionEdit: 'Edit',
+        actionDelete: 'Delete',
+        sendPost: 'Post',
+        sendSave: 'Save',
+        actionReply: 'Reply',
+        viewReply_one: 'View {{count}} reply',
+        viewReply_other: 'View {{count}} replies',
+        hideReplies: 'Hide replies',
+        loadMoreReplies: 'Load more replies',
+        replyingTo: 'Replying to {{name}}',
+    },
+
+    likersSheet: {
+        title: 'Likes',
+        subtitle_one: '{{count}} person liked this post',
+        subtitle_other: '{{count}} people liked this post',
+        emptyTitle: 'No likes yet',
+        emptyBody: 'Be the first to like this post!',
+    },
+
+    translate: 'Translate',
+    translating: 'Translating...',
+    translated: 'Translated',
+    showOriginal: 'Show Original',
+    changeLanguage: 'Change',
+    selectLanguage: 'Select Translation Language',
+    sameLanguageError: 'The text/caption is already in your selected language',
+} as const;
+
+export default post;

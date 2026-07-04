@@ -1,0 +1,56 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "dom.iterable"
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "services/**/*.ts",
+    "services/**/*.tsx",
+    "stores/**/*.ts",
+    "stores/**/*.tsx",
+    "viewmodels/**/*.ts",
+    "viewmodels/**/*.tsx",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "context/**/*.ts",
+    "context/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "i18n/**/*.ts",
+    "i18n/**/*.tsx",
+    "modules/**/*.ts",
+    "modules/**/*.tsx",
+    "styles/**/*.ts",
+    "styles/**/*.tsx",
+    "declarations.d.ts",
+    "expo-env.d.ts",
+    ".expo/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "archive",
+    "docs",
+    ".expo"
+  ]
+}

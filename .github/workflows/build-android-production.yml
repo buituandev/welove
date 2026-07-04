@@ -1,0 +1,111 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      profile:
+        description: "Build profile"
+        required: true
+        default: "production"
+        type: choice
+        options:
+          - production
+          - development
+      build_message:
+        description: "Optional build note"
+        required: false
+        default: ""
+
+env:
+  GRADLE_OPTS: -Xmx4g -XX:MaxMetaspaceSize=512m -Dfile.encoding=UTF-8
+
+jobs:
+  build-android:
+    name: Android ${{ inputs.profile }} APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+
+    steps:
+      - name: Free disk space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
+          android: false
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('bun.lockb', 'bun.lock') }}
+          restore-keys: ${{ runner.os }}-gradle-
+
+      - name: Configure Gradle JVM heap
+        run: |
+          mkdir -p ~/.gradle
+          printf 'org.gradle.jvmargs=-Xmx4g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8\norg.gradle.parallel=true\norg.gradle.workers.max=2\norg.gradle.daemon=true\n' > ~/.gradle/gradle.properties
+
+      - name: Install Bun dependencies
+        run: bun install
+
+      - name: Setup EAS CLI
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Decode Android keystore
+        run: echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > android.keystore
+
+      - name: Create EAS credentials config
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          jq -n \
+            --arg path "./android.keystore" \
+            --arg ksPass "$KEYSTORE_PASSWORD" \
+            --arg alias "$KEY_ALIAS" \
+            --arg keyPass "$KEY_PASSWORD" \
+            '{"android":{"keystore":{"keystorePath":$path,"keystorePassword":$ksPass,"keyAlias":$alias,"keyPassword":$keyPass}}}' \
+            > credentials.json
+
+      - name: Build Android APK
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        run: |
+          export GRADLE_OPTS="-Xmx4096m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError"
+          mkdir -p android
+          echo "org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m" >> android/gradle.properties
+          mkdir -p Boy/android
+          echo "org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=512m" >> Boy/android/gradle.properties
+          bunx eas build --local --profile ${{ inputs.profile }} --platform android --non-interactive
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WeLove-${{ inputs.profile }}-build-${{ github.run_number }}
+          path: "**/*.apk"
+          if-no-files-found: error
+          retention-days: 30

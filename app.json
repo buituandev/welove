@@ -1,0 +1,228 @@
+{
+  "expo": {
+    "name": "WeLove",
+    "slug": "Boy",
+    "version": "26.56.6.6",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "boy",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "CFBundleLocalizations": [
+          "en",
+          "vi",
+          "zh-Hans",
+          "zh-Hant"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#191919",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.techfox.boy",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "./withGeminiNano",
+      "./withAndroidOrientationFix",
+      "./withAndroidSvgFix",
+      [
+        "@bam.tech/react-native-app-security",
+        {
+          "preventRecentScreenshots": {
+            "ios": {
+              "enabled": true
+            },
+            "android": {
+              "enabled": true
+            }
+          }
+        }
+      ],
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#191919",
+          "android": {
+            "image": "./assets/images/logo_head.png",
+            "imageWidth": 180
+          }
+        }
+      ],
+      "@novastera-oss/rn-google-signin",
+      "expo-audio",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/GoogleSansRounded-Regular.ttf",
+            "./assets/fonts/GoogleSansRounded-Bold.ttf",
+            "./assets/fonts/GoogleSansRounded-Medium.ttf",
+            "./assets/fonts/GoogleSansRounded-Thin.ttf",
+            "./assets/fonts/GoogleSansRounded-Light.ttf",
+            "./assets/fonts/GoogleSansRounded-ExtraLight.ttf",
+            "./assets/fonts/FluentEmojiColor.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "GoogleSansFlexRegular",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-Regular.ttf",
+                    "weight": 400
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GoogleSansFlexBold",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-Bold.ttf",
+                    "weight": 700
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GoogleSansFlexMedium",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-Medium.ttf",
+                    "weight": 500
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GoogleSansFlexThin",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-Thin.ttf",
+                    "weight": 100
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GoogleSansFlexLight",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-Light.ttf",
+                    "weight": 300
+                  }
+                ]
+              },
+              {
+                "fontFamily": "GoogleSansFlexExtraLight",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/GoogleSansRounded-ExtraLight.ttf",
+                    "weight": 200
+                  }
+                ]
+              },
+              {
+                "fontFamily": "FluentEmoji",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/FluentEmojiColor.ttf",
+                    "weight": 400
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a",
+              "x86_64"
+            ],
+            "usePrecompiledHeaders": true,
+            "extraProguardRules": "-keep class androidx.media3.** { *; }\n-keep class expo.modules.video.** { *; }"
+          }
+        }
+      ],
+      "expo-asset",
+      "expo-web-browser",
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "ios": [
+              "en",
+              "vi",
+              "zh-Hans",
+              "zh-Hant"
+            ],
+            "android": [
+              "en",
+              "vi",
+              "zh-Hans",
+              "zh-Hant"
+            ]
+          }
+        }
+      ],
+      "expo-sharing",
+      "expo-image",
+      "react-native-nitro-wallpaper",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "techfox-ap"
+        }
+      ],
+      "@sentry/react-native",
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      "expo-status-bar",
+      "@react-native-vector-icons/ionicons",
+      "@react-native-vector-icons/material-icons",
+      "@react-native-vector-icons/fontawesome"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ddac2295-af33-4e05-b689-6caa80c1d9d3"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ddac2295-af33-4e05-b689-6caa80c1d9d3",
+      "enableBsdiffPatchSupport": true
+    }
+  }
+}
