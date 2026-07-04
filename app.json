@@ -211,18 +211,5 @@
       "typedRoutes": true,
       "reactCompiler": true
     },
-    "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "ddac2295-af33-4e05-b689-6caa80c1d9d3"
-      }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/ddac2295-af33-4e05-b689-6caa80c1d9d3",
-      "enableBsdiffPatchSupport": true
-    }
   }
 }
