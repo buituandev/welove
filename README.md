@@ -1,15 +1,12 @@
-# WeLove (Showcase / Lite Version)
+# WeLove
 
-Welcome to the **WeLove** showcase repository. This is a curated, non-sensitive "lite" version of the production codebase, prepared specifically to showcase architectural design, coding standards, native module integrations, and technical expertise in **React Native** and **Expo**.
-
-> [!NOTE]
-> This repository is a code showcase containing selected screens, components, and architectural files. Sensitive build credentials, API keys, and environment variables have been excluded, and the project is not meant to be run directly out-of-the-box.
+Welcome to the **WeLove** repository. This is the official codebase built with **React Native** and **Expo**.
 
 ---
 
 ## 🚀 Key Highlights & Tech Stack
 
-This project represents modern React Native development practices on the **New Architecture**, leveraging high-performance libraries and native customizations:
+This project is built using modern React Native development practices on the **New Architecture**, leveraging high-performance libraries and native customizations:
 
 - **Core Framework**: React Native (v0.86.0) & Expo SDK 57 (using file-based routing with `expo-router`).
 - **State Management & Caching**: 
@@ -20,7 +17,7 @@ This project represents modern React Native development practices on the **New A
   - **React Native Reanimated (v4)**: High-performance, worklet-driven animations.
   - **React Native Gesture Handler**: Fluid, native-feeling gestures and bottom sheets via `@lodev09/react-native-true-sheet`.
 - **Custom Native Modules**: 
-  - Contains a custom Expo Module (`/modules/variable-header-blur`) with custom Swift (iOS) and Kotlin (Android) implementations.
+  - Custom Expo Module (`/modules/variable-header-blur`) with custom Swift (iOS) and Kotlin (Android) implementations.
 - **Expo Config Plugins**: 
   - Custom build hooks and plugins such as `withAndroidOrientationFix.js`, `withAndroidSvgFix.js`, and `withGeminiNano.js`.
 - **Internationalization (i18n)**: Fully localized using `i18next` and `react-i18next`.
@@ -29,7 +26,7 @@ This project represents modern React Native development practices on the **New A
 
 ## 📂 Repository Structure
 
-Below is an overview of the key directories designed for readability and maintainability:
+Below is an overview of the key project directories:
 
 ```text
 ├── app/                      # Expo Router structure (Routes and Layouts)
@@ -47,19 +44,13 @@ Below is an overview of the key directories designed for readability and maintai
 
 ---
 
-## 🛠️ Notable Code Patterns to Review
-
-If you are a recruiter or technical interviewer, here are the recommended paths to evaluate:
+## 🛠️ Key Architectural Patterns
 
 1. **Custom Native Module**:
-   - Check out [/modules/variable-header-blur](file:///modules/variable-header-blur) for Kotlin and Swift integration under Expo's Modules API.
+   - See [/modules/variable-header-blur](file:///modules/variable-header-blur) for Kotlin and Swift integration under Expo's Modules API.
 2. **ViewModel Layer (MVVM)**:
-   - Check out [/viewmodels/HomeViewModel.ts](file:///viewmodels/HomeViewModel.ts) and [/viewmodels/PostItemViewModel.ts](file:///viewmodels/PostItemViewModel.ts) to see how logic is decoupled from React UI components.
-3. **Rich Components & Custom Animations**:
-   - See [/components/post/PostItem.tsx](file:///components/post/PostItem.tsx) or [/components/PostMediaCarousel.tsx](file:///components/PostMediaCarousel.tsx) for complex UI styling, video integrations, and carousel states.
-4. **Offline-first API Client**:
-   - Inspect [/services/client.ts](file:///services/client.ts) to review the fetch wrapper (Nitro Fetch) and TanStack Query persistence layer setup.
-
----
-
-*Thank you for reviewing my code! If you have any questions about the implementation details or architectural decisions, feel free to reach out.*
+   - See [/viewmodels/HomeViewModel.ts](file:///viewmodels/HomeViewModel.ts) and [/viewmodels/PostItemViewModel.ts](file:///viewmodels/PostItemViewModel.ts) for decoupled UI and business logic.
+3. **Components & Animations**:
+   - See [/components/post/PostItem.tsx](file:///components/post/PostItem.tsx) and [/components/PostMediaCarousel.tsx](file:///components/PostMediaCarousel.tsx) for UI styling, video integrations, and carousel states.
+4. **Offline-First API Client**:
+   - See [/services/client.ts](file:///services/client.ts) for the fetch wrapper (Nitro Fetch) and TanStack Query persistence layer configuration.
