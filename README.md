@@ -2,6 +2,21 @@
 
 Welcome to the **WeLove** repository. This is the official codebase built with **React Native** and **Expo**.
 
+## 🎨 Demo Gallery
+
+A visual preview of the mobile app experience and screen concepts included in the demo assets:
+
+![Demo mockup 1](demo/1%20%281%29.png)
+![Demo mockup 2](demo/1%20%282%29.png)
+![Demo mockup 3](demo/1%20%283%29.png)
+![Demo mockup 4](demo/1%20%284%29.png)
+![Demo mockup 5](demo/1%20%285%29.png)
+![Demo mockup 6](demo/1%20%286%29.jpg)
+![Demo mockup 7](demo/1%20%287%29.jpg)
+![Demo mockup 8](demo/1%20%288%29.jpg)
+![Demo mockup 9](demo/1%20%289%29.jpg)
+![Demo mockup 10](demo/1%20%2810%29.jpg)
+
 ---
 
 ## 🚀 Key Highlights & Tech Stack
