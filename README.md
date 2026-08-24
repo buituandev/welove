@@ -2,21 +2,36 @@
 
 Welcome to the **WeLove** repository. This is the official codebase built with **React Native** and **Expo**.
 
-## 🎨 Demo Gallery
+---
 
-A visual preview of the mobile app experience and screen concepts included in the demo assets:
+## 📱 App Screenshots
 
 <div align="center">
-  <img src="demo/1%20%281%29.png" alt="Demo mockup 1" width="260" />
-  <img src="demo/1%20%282%29.png" alt="Demo mockup 2" width="260" />
-  <img src="demo/1%20%283%29.png" alt="Demo mockup 3" width="260" />
-  <img src="demo/1%20%284%29.png" alt="Demo mockup 4" width="260" />
-  <img src="demo/1%20%285%29.png" alt="Demo mockup 5" width="260" />
-  <img src="demo/1%20%286%29.jpg" alt="Demo mockup 6" width="260" />
-  <img src="demo/1%20%287%29.jpg" alt="Demo mockup 7" width="260" />
-  <img src="demo/1%20%288%29.jpg" alt="Demo mockup 8" width="260" />
-  <img src="demo/1%20%289%29.jpg" alt="Demo mockup 9" width="260" />
-  <img src="demo/1%20%2810%29.jpg" alt="Demo mockup 10" width="260" />
+  <img src="demo/1%20(1).jpg" width="19%" alt="Demo Screenshot 1" />
+  <img src="demo/1%20(2).jpg" width="19%" alt="Demo Screenshot 2" />
+  <img src="demo/1%20(3).jpg" width="19%" alt="Demo Screenshot 3" />
+  <img src="demo/1%20(4).jpg" width="19%" alt="Demo Screenshot 4" />
+  <img src="demo/1%20(5).jpg" width="19%" alt="Demo Screenshot 5" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="demo/1%20(6).jpg" width="19%" alt="Demo Screenshot 6" />
+  <img src="demo/1%20(7).jpg" width="19%" alt="Demo Screenshot 7" />
+  <img src="demo/1%20(8).jpg" width="19%" alt="Demo Screenshot 8" />
+  <img src="demo/1%20(9).jpg" width="19%" alt="Demo Screenshot 9" />
+  <img src="demo/1%20(10).jpg" width="19%" alt="Demo Screenshot 10" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="demo/1%20(1).png" width="19%" alt="Demo Screenshot 11" />
+  <img src="demo/1%20(2).png" width="19%" alt="Demo Screenshot 12" />
+  <img src="demo/1%20(3).png" width="19%" alt="Demo Screenshot 13" />
+  <img src="demo/1%20(4).png" width="19%" alt="Demo Screenshot 14" />
+  <img src="demo/1%20(5).png" width="19%" alt="Demo Screenshot 15" />
 </div>
 
 ---
